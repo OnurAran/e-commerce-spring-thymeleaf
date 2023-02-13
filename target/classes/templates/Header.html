@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="headerfiles">
+  <meta charset="UTF-8" />
+  <link th:href="@{/css/Header.css}" rel="stylesheet">
+</head>
+<body>
+<div th:fragment="header">
+  <h1>Türkiyenin en iyi mağazası onur.com</h1>
+</div>
+<aside>
+  <div>This is a sidebar</div>
+</aside>
+<div class="another">This is another sidebar</div>
+<footer th:fragment="footer">
+  <a th:href="@{/#}">Fragments Index</a> |
+  <a th:href="@{/#}">Markup inclussion</a> |
+  <a th:href="@{/#}">Fragment params</a> |
+  <a th:href="@{/#}">Other</a>
+</footer>
+</body>
+</html>
