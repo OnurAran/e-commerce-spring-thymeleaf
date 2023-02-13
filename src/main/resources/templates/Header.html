@@ -2,21 +2,36 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="headerfiles">
   <meta charset="UTF-8" />
-  <link th:href="@{/css/Header.css}" rel="stylesheet">
+  <link th:href="@{../static/css/Header.css}" rel="stylesheet">
+<style>
+  .footer{
+    float: left;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    background-color: black;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+</style>
 </head>
 <body>
-<div th:fragment="header">
+<div th:fragment="header" class = "header">
   <h1>Türkiyenin en iyi mağazası onur.com</h1>
 </div>
 <aside>
   <div>This is a sidebar</div>
 </aside>
 <div class="another">This is another sidebar</div>
-<footer th:fragment="footer">
-  <a th:href="@{/#}">Fragments Index</a> |
-  <a th:href="@{/#}">Markup inclussion</a> |
-  <a th:href="@{/#}">Fragment params</a> |
-  <a th:href="@{/#}">Other</a>
+<footer th:fragment="footer" class = "footer">
+  <ul>
+    <li><a th:href="@{/#}" class="active">Home</a></li>
+    <li><a th:href="@{/#}" href="#news">News</a></li>
+    <li><a th:href="@{/#}" href="#contact">Contact</a></li>
+    <li><a th:href="@{/#}" href="#about">About</a></li>
+  </ul>
 </footer>
 </body>
 </html>

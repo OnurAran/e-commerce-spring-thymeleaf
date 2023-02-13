@@ -27,7 +27,7 @@ public class Product {
     @Column(name = "priceCurrency")
     private Currency priceCurrency;
     @Column(name = "discountRate")
-    private int discountRate;
+    private BigDecimal discountRate;
 
 
 }
