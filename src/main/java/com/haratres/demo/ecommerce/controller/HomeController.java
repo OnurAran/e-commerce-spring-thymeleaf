@@ -13,6 +13,7 @@ public class HomeController {
         this.productService = productService;
     }
 
+
     @GetMapping("/home")
     public String Products(Model theModel){
         theModel.addAttribute("product", productService.findAllProduct());
