@@ -14,6 +14,6 @@ public interface CartRepository extends JpaRepository<Cart,Long> {
     @Query(value = "INSERT INTO Cart VALUES (product)",nativeQuery = true)
     Cart insertProductToCartById(Product product);
 
-    @Query(value = "SELECT * FROM Cart WHERE id=?1",nativeQuery = true)
+    @Query(value = "SELECT * FROM Cart WHERE userId=?1",nativeQuery = true)
     List<Product> getAllProductInMyCart(Long userId);
 }
